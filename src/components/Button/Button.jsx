@@ -1,32 +1,36 @@
-import React from 'react'
-import './Button.css'
-import {useState} from 'react'
+import "./Button.css";
+import { useState } from "react";
 
-function Button({button,currentColor}) {
-  const [color,setColor] = useState(currentColor)
-  const [initial,setInitial]   = useState(currentColor)
+function Button({ buttonText, currentColor }) {
+  const [color, setColor] = useState(currentColor);
+  const [initial, setInitial] = useState(currentColor);
 
   const handleMouse = () => {
-        setColor("dark_grey")
+    setColor("dark_grey");
+  };
+
+  const handleMouseOut = () => {
+    if (initial === "dark") {
+      setColor("dark");
+    } else {
+      setColor('grey');
     }
+  };
 
-   const handleMouseOut = ()=>{
-       if(initial==="dark"){
-        setColor("dark")}
-        else{
-            setColor("grey")
-        }
-   } 
- 
-    return (
+  return (
     <>
-        <div className="button_component">
-        <button className={color} type="submit" onMouseOver={handleMouse} onMouseOut={handleMouseOut}>{button}</button>
-
-        </div>
-        
+      <div className="button_component">
+        <button
+          className={color}
+          type="submit"
+          onMouseOver={handleMouse}
+          onMouseOut={handleMouseOut}
+        >
+          {buttonText}
+        </button>
+      </div>
     </>
-  )
+  );
 }
 
-export default Button
+export default Button;

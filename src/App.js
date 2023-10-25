@@ -1,17 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import Button from './components/Button/Button'
+import "./App.css";
+import Button from "./components/Button/Button";
 
 function App() {
- 
-
-
   return (
-    
     <>
-    <Button button={"Contact"} currentColor={"dark"} />
-    
-    <Button button={"Something"} currentColor={"grey"} />
+      <Button buttonText="Contact" currentColor="dark" />
+
+      <Button buttonText="Something" currentColor="grey" />
     </>
   );
 }
