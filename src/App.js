@@ -9,7 +9,7 @@ function App() {
   return (
     
     <>
-    <Button button={"Contact"} currentColor={"dark"} />
+    <Button button="Contact" currentColor="dark" />
     
     <Button button={"Something"} currentColor={"grey"} />
     </>
