@@ -4,9 +4,9 @@ import Button from "./components/Button/Button";
 function App() {
   return (
     <>
-      <Button buttonText="Contact" currentColor="dark" />
-
-      <Button buttonText="Something" currentColor="grey" />
+    <Button button={"Contact"} currentColor={"dark"} />
+    
+    <Button button={"Something"} currentColor={"grey"} />
     </>
   );
 }
