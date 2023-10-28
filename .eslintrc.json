@@ -1,0 +1,22 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+  },
+  "extends": ["plugin:react/recommended", "plugin:prettier/recommended"],
+  "plugins": ["react", "react-hooks", "prettier"],
+  "rules": {
+    "react/prop-types": 0, // You can set your own rules here
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
